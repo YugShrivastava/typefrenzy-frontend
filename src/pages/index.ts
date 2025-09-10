@@ -1,23 +1,23 @@
+import CreateRoomPage from "./CreateRoom";
 import HomePage from "./HomePage";
-import LoginPage from "./LoginPage";
 import LeaderBoardPage from "./LeaderBoardPage";
-import SignUpPage from "./SignUpPage";
+import LoginPage from "./LoginPage";
+import NotFoundPage from "./NotFoundPage";
 import ProfilePage from "./ProfilePage";
 import RacePage from "./RacePage";
-import NotFoundPage from './NotFoundPage';
-import CreateRoomPage from "./CreateRoomPage";
 import RoomsPage from "./RoomsPage";
 import SettingsPage from "./SettingsPage";
+import SignUpPage from "./SignUpPage";
 
 export {
+    CreateRoomPage,
     HomePage,
-    LoginPage,
     LeaderBoardPage,
-    SignUpPage,
+    LoginPage,
+    NotFoundPage,
     ProfilePage,
     RacePage,
-    NotFoundPage,
-    CreateRoomPage,
     RoomsPage,
-    SettingsPage
+    SettingsPage,
+    SignUpPage
 }
