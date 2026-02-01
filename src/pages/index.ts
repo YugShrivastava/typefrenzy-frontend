@@ -8,6 +8,7 @@ import RacePage from "./RacePage";
 import RoomsPage from "./RoomsPage";
 import SettingsPage from "./SettingsPage";
 import SignUpPage from "./SignUpPage";
+import TypePage from "./TypePage";
 
 export {
     CreateRoomPage,
@@ -19,5 +20,6 @@ export {
     RacePage,
     RoomsPage,
     SettingsPage,
-    SignUpPage
+    SignUpPage,
+    TypePage
 }

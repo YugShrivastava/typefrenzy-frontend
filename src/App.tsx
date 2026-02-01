@@ -25,7 +25,10 @@ function App() {
                     }
                 })
                 .catch((err) => console.log(err))
-                .finally(() => setloading(false))
+                .finally(() => {
+                    setloading(false)
+                    console.log(authStatus)
+                })
         } else {
             console.log("token not found");
             logout();

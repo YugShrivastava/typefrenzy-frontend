@@ -17,9 +17,10 @@ function Navbar({ authStatus }: any) {
     };
 
     const navLinks = [
-        { url: "/", name: "Home", place: true },
+        { url: "/", name: "Home", place: !authStatus },
         { url: "/login", name: "Login", place: !authStatus },
         { url: "/signup", name: "Sign up", place: !authStatus },
+        { url: "/type", name: "Type", place: authStatus },
         { url: "/rooms", name: "Rooms", place: authStatus },
         { url: "/create-room", name: "Create Room", place: authStatus },
         { url: "/leaderboard", name: "Leaderboard", place: true },
@@ -42,8 +43,8 @@ function Navbar({ authStatus }: any) {
                                 key={link.url}
                                 className={({ isActive }) =>
                                     isActive
-                                        ? "text-sky-400"
-                                        : "hover:text-sky-400"
+                                        ? "text-sky-400 duration-200"
+                                        : "hover:text-sky-400 duration-200"
                                 }
                             >
                                 {link.name}
@@ -55,7 +56,7 @@ function Navbar({ authStatus }: any) {
                         <div className="relative" ref={profileRef}>
                             <button
                                 onClick={() => setProfileOpen(!isProfileOpen)}
-                                className="flex items-center text-neutral-700 hover:text-black transition focus:outline-none hover:underline"
+                                className="flex items-center text-neutral-700 hover:text-black transition focus:outline-none hover:underline cursor-pointer"
                             >
                                 <img
                                     src={DefaultAvatar}
@@ -83,21 +84,21 @@ function Navbar({ authStatus }: any) {
                                 <div className="absolute mt-2 w-30 bg-slate-800 rounded-md shadow-lg py-1">
                                     <Link
                                         to="/profile"
-                                        className="block px-4 py-2 text-sm text-gray-50 hover:bg-slate-700 hover:text-white"
+                                        className="block px-4 py-2 text-sm duration-200 text-gray-50 hover:bg-slate-700 hover:text-white"
                                     >
                                         Profile
                                     </Link>
                                     <Link
                                         to={"/settings"}
-                                        className="block px-4 py-2 text-sm text-gray-50 hover:bg-slate-700 hover:text-white"
+                                        className="block px-4 py-2 text-sm duration-200 text-gray-50 hover:bg-slate-700 hover:text-white"
                                     >
                                         Settings
                                     </Link>
                                     <button
                                         onClick={handleLogout}
-                                        className="block w-full px-4 text-left py-2 text-sm text-orange-400 hover:bg-slate-700 hover:text-red-500"
+                                        className="block w-full px-4 text-left duration-200 cursor-pointer py-2 text-sm text-orange-300 hover:bg-slate-700 hover:text-red-500"
                                     >
-                                        Sign out
+                                        Log out
                                     </button>
                                 </div>
                             )}

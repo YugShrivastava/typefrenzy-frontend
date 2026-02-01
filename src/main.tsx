@@ -13,6 +13,7 @@ import {
     SettingsPage,
     SignUpPage,
     RacePage,
+    TypePage,
 } from "./pages/";
 import { RouterProvider } from "react-router-dom";
 import AuthLayout from "./layouts/AuthLayout.js";
@@ -56,6 +57,14 @@ const router = createBrowserRouter([
                 element: (
                     <AuthLayout authentication={true}>
                         <RacePage />
+                    </AuthLayout>
+                ),
+            },
+            {
+                path: "type",
+                element: (
+                    <AuthLayout authentication={true}>
+                        <TypePage />
                     </AuthLayout>
                 ),
             },
